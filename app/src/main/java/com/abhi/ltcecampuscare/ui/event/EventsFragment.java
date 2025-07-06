@@ -208,7 +208,7 @@ public class EventsFragment extends Fragment {
         GeminiRequest body = new GeminiRequest();
         body.contents = contents;
 
-        String apiKey = "AIzaSyCaqEcdWRtZo0ZzttxVil4E-HjpAREAPFc"; // Replace with secured approach later
+        String apiKey = BuildConfig.GEMINI_API_KEY;
 
         // Call Gemini API
         Call<GeminiResponse> call = api.generateText(apiKey, body);
