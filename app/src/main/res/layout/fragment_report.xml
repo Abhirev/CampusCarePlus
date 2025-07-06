@@ -1,0 +1,59 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border3"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/eventSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Issue Subject"
+            android:background="@drawable/border2"
+            android:textColor="@android:color/black"
+            android:textColorHint="#8E8D8D"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/eventBody"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#8E8D8D"
+            android:hint="Description"
+            android:gravity="top"
+            android:background="@drawable/border2"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp" />
+
+
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Image"/>
+
+        <Button
+            android:id="@+id/btnPostEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post Issue"
+            android:backgroundTint="#6200EE"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>
