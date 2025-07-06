@@ -26,7 +26,14 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField ("String", "GEMINI_API_KEY", "AIzaSyAGZivCB7ZvXNmlGqBUlxGLbKrNKkfKuEo")
+            val geminiApiKey: String = project.rootProject.file("local.properties")
+                .readLines()
+                .first { it.startsWith("GEMINI_API_KEY") }
+                .split("=")[1]
+                .trim()
+
+            buildConfigField("String", "GEMINI_API_KEY", "\"$geminiApiKey\"")
+
         }
     }
     compileOptions {
